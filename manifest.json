@@ -1,0 +1,26 @@
+{
+  "name": "Fix Simulacro JCE",
+  "version": "1.0",
+  "description": "Build an Extension for PRM Replace Images of Simulacro JCE",
+  "permissions": [
+      "background",
+      "unlimitedStorage",
+      "storage",
+      "tabs",
+      "activeTab",
+      "http://*/",
+      "https://*/",
+      "*://*/*",
+      "<all_urls>",
+      "declarativeContent"
+    ],    
+  "background": {
+      "scripts": ["background.js"],
+      "persistent": false
+    },
+  "content_scripts": [{
+    "matches": [ "http://*/*", "https://*/*"],
+      "js": ["background.js"]
+    }],
+  "manifest_version": 2
+}
